@@ -11,6 +11,7 @@ var beatles = [4]string{
 
 func main() {
 	var a [2]string
+
 	a[0] = "Robin"
 	a[1] = "Charlotte"
 	fmt.Println(a[0], a[1]) // Robin Charlotte

@@ -18,4 +18,9 @@ func main() {
 	fmt.Println(i) // [1 2 3 4 5]
 	fmt.Println(b) // [true true false false]
 	fmt.Println(s) // [ {1 true} {2 true} {3 false} {4 false}]
+
+	fmt.Println(i[1:4]) // [2 3 4]
+	fmt.Println(i[:4])  // [1 2 3 4]
+	fmt.Println(i[1:])  // [2 3 4 5]
+	fmt.Println(i[:])   // [1 2 3 4 5]
 }
