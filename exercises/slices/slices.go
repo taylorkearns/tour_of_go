@@ -1,10 +1,27 @@
 package main
 
-import "golang.org/x/tour/pic"
+import "fmt"
 
-func Pic(dx, dy int) [][]uint8 {
+func myPic(dx, dy int) [][]uint8 {
+	result := [][]uint8{}
+
+	for i := 0; i < dy; i++ {
+		result = append(result, childSlice(i, dx))
+	}
+
+	return result
+}
+
+func childSlice(parentI, length int) []uint8 {
+	result := []uint8{}
+
+	for i := 0; i < length; i++ {
+		result = append(result, uint8(parentI*i))
+	}
+
+	return result
 }
 
 func main() {
-	pic.Show(Pic)
+	fmt.Println(myPic(3, 5))
 }
